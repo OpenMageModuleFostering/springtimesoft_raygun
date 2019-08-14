@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <Springtimesoft_Raygun>
+            <version>1.0.0</version>
+        </Springtimesoft_Raygun>
+    </modules>
+    <global>
+        <helpers>
+            <springtimesoft_raygun>
+                <class>Springtimesoft_Raygun_Helper</class>
+            </springtimesoft_raygun>
+        </helpers>
+        <models>
+            <springtimesoft_raygun>
+                <class>Springtimesoft_Raygun_Model</class>
+            </springtimesoft_raygun>
+        </models>
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <springtimesoft_raygun>
+                        <class>Springtimesoft_Raygun_Model_Observer</class>
+                        <method>registerHandlers</method>
+                    </springtimesoft_raygun>
+                </observers>
+            </controller_action_predispatch>
+            <fatal_exception_handler>
+                <observers>
+                    <springtimesoft_raygun>
+                        <class>Springtimesoft_Raygun_Model_Observer</class>
+                        <method>fatalExceptionHandler</method>
+                    </springtimesoft_raygun>
+                </observers>
+            </fatal_exception_handler>
+        </events>
+    </global>
+    <crontab>
+        <jobs>
+            <!-- Cronjob to clean up error reports. -->
+            <springtimesoft_raygun>
+                <schedule><cron_expr>*/5 * * * *</cron_expr></schedule>
+                <run><model>springtimesoft_raygun/observer::logReports</model></run>
+            </springtimesoft_raygun>
+        </jobs>
+    </crontab>
+    <default>
+        <springtimesoft_raygun>
+            <springtimesoft_raygun_group>
+                <springtimesoft_raygun_enabled>1</springtimesoft_raygun_enabled>
+                <springtimesoft_raygun_api_key></springtimesoft_raygun_api_key>
+            </springtimesoft_raygun_group>
+            <springtimesoft_raygun_advanced_group>
+                <springtimesoft_raygun_async>1</springtimesoft_raygun_async>
+                <springtimesoft_raygun_tags>php</springtimesoft_raygun_tags>
+            </springtimesoft_raygun_advanced_group>
+        </springtimesoft_raygun>
+    </default>
+</config>

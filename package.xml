@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Springtimesoft_Raygun</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/mit-license.php">MIT</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This is the official provider for the Raygun.io error reporting and tracking service.</summary>
+    <description>This is the official provider for the Raygun error reporting and tracking service built by Springtimesoft, allowing you to automatically send errors and exceptions to Raygun from your Magento site.</description>
+    <notes>Initial Release of the Springtimesoft Raygun extension.</notes>
+    <authors><author><name>Developer Springtimesoft</name><user>sts_sysadmin</user><email>sysadmins@springtimesoft.co.nz</email></author><author><name>Zane Ashby</name><user>zanea</user><email>zane@springtimesoft.co.nz</email></author><author><name>Benjamin Reichelt</name><user>deberoppa</user><email>ben@springtimesoft.co.nz</email></author></authors>
+    <date>2014-10-09</date>
+    <time>23:55:51</time>
+    <contents><target name="magecommunity"><dir name="Springtimesoft"><dir name="Raygun"><dir name="Helper"><file name="Data.php" hash="782a7aaa5585b2aac949e18ff236b5a3"/></dir><dir name="Model"><file name="Observer.php" hash="b49e81c46dd4e504234a562fcf28c00f"/></dir><dir name="Raygun4php"><dir name="Exception"><file name="UnsatisfiedDependencyException.php" hash="32b7fff3854ba20107b89a100550dc41"/><file name="UnsupportedOperationException.php" hash="951d8a9fc2bdfae0acc432ea6dabffa4"/></dir><file name="Raygun4PhpException.php" hash="f6d4ef9f38a74578b115fbdf6e2fd3c5"/><file name="RaygunClient.php" hash="cf35cdfed10f67d75f067a3715efb82a"/><file name="RaygunClientMessage.php" hash="18933645e7e9167caaf6d24d04853615"/><file name="RaygunEnvironmentMessage.php" hash="1dc7b1448be1943279a6c0adddd9358c"/><file name="RaygunExceptionMessage.php" hash="bcc727c154290e37a2009c1e3c4d71f2"/><file name="RaygunExceptionTraceLineMessage.php" hash="8aa87f7ddee8c00855737e85bbcb29cd"/><file name="RaygunIdentifier.php" hash="49461fa525594b15f3a350fd1da1c2a0"/><file name="RaygunMessage.php" hash="865eaa58577265fb52a85ee861102625"/><file name="RaygunMessageDetails.php" hash="2403453f658d7a943bd476e7fad186d7"/><file name="RaygunRequestMessage.php" hash="5f3bd5c559a0b882200f2f0152036c2c"/><file name="Uuid.php" hash="9db740992b0dad17bf2047d13565b428"/><file name="cacert.crt" hash="47961e7ef15667c93cd99be01b51f00a"/></dir><dir name="etc"><file name="adminhtml.xml" hash="2da841993dc9296c439b863385b0d312"/><file name="config.xml" hash="78be8cdad141b805a80b76bb76eccd4a"/><file name="system.xml" hash="49a12c4cbb81e4459802ebfc4404c3d1"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Springtimesoft_Raygun.xml" hash="50794573593002108fde4178cb918bd5"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.3.0</min><max>5.6.0</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.7.0.0</min><max>1.9</max></package><extension><name>curl</name><min></min><max></max></extension></required></dependencies>
+</package>
