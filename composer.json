@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Springtimesoft_Raygun",
+    "name": "OpenMageModuleFostering\/Springtimesoft_Raygun",
     "type": "magento-module",
     "license": "MIT",
     "homepage": "",
     "description": "This is the official provider for the Raygun.io error reporting and tracking service.",
     "authors": [
-    {
-        "name": "Developer Springtimesoft",
-        "email": "sysadmins@springtimesoft.co.nz"
-    }
-],
+        {
+            "name": "Developer Springtimesoft",
+            "email": "sysadmins@springtimesoft.co.nz"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
